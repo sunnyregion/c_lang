@@ -31,7 +31,7 @@
 */
 int main(int argc, char const *argv[])
 {
-	int iInput,digit ,x,i;
+	int iInput,digit ,x,i,j;
 	int iOddEven[6];
 	int iPlaces[6];
 	int iResult=0;
@@ -48,7 +48,7 @@ int main(int argc, char const *argv[])
 			i++;
 		}
 		i--;i--;
-		for(int j=i;j>-1;j--){
+		for(j=i;j>-1;j--){
 			iResult+=!(iOddEven[j]^iPlaces[j]);
 			
 			printf("%d %d %d %d\n", iOddEven[j],iPlaces[j] ,!(iOddEven[j]^iPlaces[j]),iResult);
