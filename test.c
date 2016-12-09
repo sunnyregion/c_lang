@@ -1,21 +1,38 @@
 #include <stdio.h>
-#include <stdlib.h>
-
-char * my_strlwr(char *str)
+int main()
 {
-   char *p = str;
-   while (*p != '\0')
-   {
-      if(*p >= 'A' && *p <= 'Z')
-        *p = (*p) + 0x20;
-      p++;
+    int m;
+    printf("Input m: ");
+    scanf("%d", &m);        //输入一个整数
+    if (m > 0)              //是否为正数
+    {
+        if (m % 2 == 0)     //是正数，且能被2整除，则是正偶数
+        {
+            printf("%d is a positive even\n", m);
+        }
+        else                    //不能被2整除，则是正奇数
+        {
+            printf("%d is a positive odd\n", m);
+        }
     }
-  return str;
-}
-int main(int argc, char const *argv[])
-{
-	char str[] = "HTTP://see.xidian.edu.cn/cpp/u/shipin/";
-    printf("%s\n", strlwr(str));
-    printf("%s\n", str);
-    return  0;
+ 
+     
+   else if(m<0)          //判断是否为负数
+     
+    {
+        if(m % 2 ==0)
+         
+        {
+             printf("%d is a negative even\n", m);   //是负偶数
+        }
+        else
+        {
+             printf("%d is a negative odd\n", m);    //是负奇数
+        }
+    }
+    else
+    {
+        printf("%d is zero.It is an even\n", m);    
+    }
+   return 0;
 }

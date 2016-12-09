@@ -51,13 +51,13 @@ char * strlwr(char *str)
   return str;
 }
 
-char* strupr(char * str){
+char * strupr(char *str){
 	if(str == NULL)
 		return NULL; 
 	char *p = str;
 	while (*p != '\0'){
 		if(*p >= 'a' && *p <= 'z')
-			*p = (*p) + 'A';
+			*p = (*p) - 0x20;
 		p++;
 	}
     return str;
